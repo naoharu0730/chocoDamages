@@ -1,0 +1,93 @@
+<!doctype html>
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1">
+    <title>被ダメ計算</title>
+
+    <link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/themes/smoothness/jquery-ui.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/fomantic-ui@2.8.7/dist/semantic.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/fomantic-ui@2.8.7/dist/semantic.min.js"></script>
+    <script src="js/calc.js"></script>
+    <script src="js/event.js"></script>
+
+    <link rel="stylesheet" type="text/css" href="css/index.css">
+</head>
+
+<body>
+    <header>
+        <h1>被ダメ計算</h1>
+    </header>
+
+    <fieldset>
+        <legend>ステータス入力</legend>
+
+        <table class="status-table">
+            <tr>
+                <th class="atk-item">敵ATK/MAT</th>
+                <td> <input id="atkTotal" type="number" value="5" name="atkTotal" required /> </td>
+            </tr>
+            <tr>
+                <th class="def-item">キャラDEF/MDF</th>
+                <td> <input id="defTotal" type="number" value="1" name="defTotal" required /> </td>
+            </tr>
+            <tr>
+                <th class="chara-element">キャラ属性</th>
+                <td> 
+                    <div class="ui buttons">
+                            <button id="fireElement" class="ui mini basic button">火</button>
+                            <button id="waterElement" class="ui mini basic button">水</button>
+                            <button id="treeElement" class="ui mini basic button">木</button>
+                            <button id="lightElement" class="ui mini basic button active">光</button>
+                            <button id="darkElement" class="ui mini basic button">闇</button>
+                    </div>
+                </td>
+            </tr>
+            <tr>
+                <th class="tolerance-item">耐性値</th>
+                <td> <input id="toleranceTotal" type="number" value="0" name="toleranceTotal" required /> </td>
+            </tr>
+        </table>
+
+    </fieldset>
+
+    <fieldset>
+        <legend>被ダメージ</legend>
+        <table class="result-table">
+            <tr>
+                <th> <label class="element-item">敵属性</label> </th>
+                <th> <label class="fire-item">火</label> </th>
+                <th> <label class="water-item">水</label> </th>
+                <th> <label class="tree-item">木</label> </th>
+                <th> <label class="light-item">光</label> </th>
+                <th> <label class="dark-item">闇</label> </th>
+                <th> <label class="empty-item">無</label> </th>
+            </tr>
+            <tr>
+                <th> <label class="normal-item">通常</label> </th>
+                <td> <output id="fireResult" name="fireResult">???</output> </td>
+                <td> <output id="waterResult" name="waterResult">???</output> </td>
+                <td> <output id="treeResult" name="treeResult">???</output> </td>
+                <td> <output id="lightResult" name="lightResult">???</output> </td>
+                <td> <output id="darkResult" name="darkResult">???</output> </td>
+                <td> <output id="emptyResult" name="emptyResult">???</output> </td>
+            </tr>
+            <tr>
+                <th> <label class="critical-item">クリティカル</label> </th>
+                <td> <output id="fireCriticalResult" name="fireCriticalResult">???</output> </td>
+                <td> <output id="waterCriticalResult" name="waterCriticalResult">???</output> </td>
+                <td> <output id="treeCriticalResult" name="treeCriticalResult">???</output> </td>
+                <td> <output id="lightCriticalResult" name="lightCriticalResult">???</output> </td>
+                <td> <output id="darkCriticalResult" name="darkCriticalResult">???</output> </td>
+                <td> <output id="emptyCriticalResult" name="emptyCriticalResult">???</output> </td>
+            </tr>
+        </table>
+
+    </fieldset>
+
+</body>
+
+</html>

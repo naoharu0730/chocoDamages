@@ -1,0 +1,55 @@
+h2 {
+    border-bottom: 3px solid #000;
+}
+
+.result-table{
+    border-collapse: collapse;
+    border: solid 2px gray;
+}
+.result-table th, .result-table td{
+    border: solid 1px gray;
+    width: 6em;
+}
+.result-table th:nth-child(1){
+    border: solid 1px gray;
+    width: 7em;
+}
+
+.fire-item{
+    color: red;
+}
+.water-item{
+    color: blue;
+}
+.tree-item{
+    color: green;
+}
+.light-item{
+    color:orange;
+}
+.dark-item{
+    color:purple;
+}
+.empty-item{
+    color:gray;
+}
+
+.atk-item{
+    color: #db2828;
+}
+.def-item{
+    color: #2185d0;
+}
+.mat-item{
+    color: #a333c8;
+}
+.mdf-item{
+    color: #6435c9;
+}
+
+input{
+    width: 6em;
+}
+.card-table input{
+    width: 4em;
+}
