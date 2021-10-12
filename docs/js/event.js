@@ -4,6 +4,12 @@ $(document).ready(function () {
         calculation() // 入力値の更新タイミングで更新
     });
 
+    // ステータス入力の更新
+    $('select').change(function () {
+        updateReference() // ATK参照ドロップダウンの更新タイミングで更新
+        calculation() // 入力値の更新タイミングで更新
+    });
+
     // 計算モード選択
     $('#physicalMode').on('click', function () {
         resetModeActive() // ボタンの選択状態を解除

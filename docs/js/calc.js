@@ -30,9 +30,22 @@ function calculation() {
 }
 
 /**
+ * 敵ATK参照の選択状態を取得し、敵ATKを設定する
+ */
+function updateReference() {
+    let refAtk = $('[name=atk-reference]').val();
+    if (refAtk == 0) {
+        $('#atkTotal').prop('disabled', false); // ATKを参照しない場合はATK入力欄は活性にする
+        return; // カスタムが選択されていたら、ATKを更新しない
+    } 
+    $('#atkTotal').prop('disabled', true); // ATKを参照する場合はATK入力欄は非活性にする
+    $('#atkTotal').val(refAtk);
+}
+
+/**
  * 計算モードボタンの選択状態を解除する
  */
- function resetModeActive() {
+function resetModeActive() {
     $('#physicalMode').removeClass("active");
     $('#magicalMode').removeClass("active");
 }
@@ -41,7 +54,7 @@ function calculation() {
  * 計算モードボタンの選択状態を取得し、計算モード用の数値を返す
  * @returns 属性用の数値
  */
- function hasModeActive() {
+function hasModeActive() {
     if($('#physicalMode').hasClass("active")) return 0;
     if($('#magicalMode').hasClass("active")) return 1;
     return 0;
