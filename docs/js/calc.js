@@ -33,7 +33,7 @@ function calculation() {
  * 敵ATK参照の選択状態を取得し、敵ATKを設定する
  */
 function updateReference() {
-    let refAtk = $('[name=atk-reference]').val();
+    let refAtk = $('#atk-reference-list').val();
     if (refAtk == 0) {
         $('#atkTotal').prop('disabled', false); // ATKを参照しない場合はATK入力欄は活性にする
         return; // カスタムが選択されていたら、ATKを更新しない
