@@ -22,6 +22,62 @@
         <h1>被ダメ計算</h1>
     </header>
 
+    <button id="description" class="circular compact ui button"><i class="icon lightbulb outline"></i>使い方</button>
+    <div class="description-top ui coupled modal">
+        <div class="header">使い方</div>
+        <div class="scrolling content">
+            <h2>概要</h2>
+            <h3>サイトについて</h3>
+            <p>このサイトは、チョコットランドの被ダメージを計算するサイトです。</p>
+
+            <h3>大まかな流れ</h3>
+            <p>以下のように使います。</p>
+            <li>1. ステータス入力にキャラや敵のステータスを書く</li>
+            <li>2. 被ダメージの結果を見る</li>
+
+            <h2>ステータス入力</h2>
+            <p>キャラのステータスや、敵のステータスなどを入力します。</p>
+            <ul>
+                <li>計算モード：敵の攻撃種類に合わせて選択する</li>
+                <li>敵ATK参照/敵MAT参照：主要な敵のリスト</li>
+                <li>敵ATK/敵MAT：敵のATK/敵のMATの値を入れる</li>
+                <li>キャラDEF/キャラMDF：キャラのDEF/キャラのMDFの値を入れる</li>
+                <li>キャラ属性：キャラの属性を選択する</li>
+                <li>キャラ耐性値：キャラの耐性値を入れる（装備にある「耐性+5000」などの耐性値を含めたい場合）</li>
+            </ul>
+            <p><img src="images/input-status.png" alt="" decoding="async" width="373" height="206"></p>
+            <p>上記の画像のように、キャラや敵のステータスを入力してください。<br>
+                画像の例では、</p>
+            <ul>
+                <li>敵の攻撃：物理攻撃、ATK5000</li>
+                <li>キャラ：DEF1000、水属性、耐性装備など特になし</li>
+            </ul>
+            <p>となっています。</p>
+            <p>※敵の攻撃情報については、このサイトでは調べられません。</p>
+            <div class="option-box">
+                <span class="option-box-title">便利な機能：敵ATK参照/敵MAT参照</span>
+                <p>敵の情報を調べるのが大変な時は、「敵ATK参照/敵MAT参照」を使って数値を参照することができます。<br>
+                    主要な敵をリストアップしています。<br>
+                    ※リストは作成者の独断と偏見により作成されています。<br>
+                    　また、リストの数値は作成者が集めた情報を元に設定されており、正確ではない可能性があります。</p>
+            </div>
+
+            <h2>被ダメージ</h2>
+            <p>想定される被ダメージの結果が表示されます。<br>
+                下記の画像は、ステータス入力のような敵・キャラの時の被ダメージの例です。</p>
+            <ul>
+                <li>敵属性：敵の属性</li>
+                <li>通常：敵が通常攻撃をした時の、被ダメージ</li>
+                <li>クリティカル：敵が通常攻撃をした時にクリティカルが発生した時の、被ダメージ</li>
+            </ul>
+            <p><img src="images/result-damage.png" alt="" decoding="async" width="629" height="313"></p>
+            <p>※敵がスキルを使用した時の被ダメージについては、このサイトでは調べられません。</p>
+        </div>
+        <div class="actions">
+            <div class="ui cancel button">閉じる</div>
+        </div>
+    </div>
+
     <fieldset>
         <legend>ステータス入力</legend>
 
@@ -70,7 +126,7 @@
                 </td>
             </tr>
             <tr>
-                <th class="tolerance-item">耐性値</th>
+                <th class="tolerance-item">キャラ耐性値</th>
                 <td> <input id="toleranceTotal" type="number" value="0" name="toleranceTotal" required /> </td>
             </tr>
         </table>
