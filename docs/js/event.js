@@ -79,4 +79,9 @@ $(document).ready(function () {
         $('#darkElement').addClass("active");
         calculation() // 処理の追加タイミングで更新
     });
+
+    // 使い方の表示
+    $('#description').on('click', function () {
+        $('.description-top.ui.modal').modal('show');
+    });
 })
